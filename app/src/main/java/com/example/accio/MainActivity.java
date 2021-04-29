@@ -10,7 +10,7 @@ import android.widget.EditText;
 public class MainActivity extends AppCompatActivity {
 
     EditText username, password;
-    Button login;
+    Button login, registrati;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
