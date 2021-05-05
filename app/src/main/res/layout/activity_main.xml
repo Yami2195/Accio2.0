@@ -13,38 +13,60 @@
         tools:layout_editor_absoluteX="34dp"
         tools:layout_editor_absoluteY="16dp">
 
-
-
         <TextView
-            android:layout_marginTop="200dp"
-            android:layout_marginLeft="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="200dp"
+            android:fontFamily="@font/lato_bold"
             android:text="Username"
-            android:textSize="30dp" />
+            android:textSize="25dp" />
 
         <EditText
             android:id="@+id/attrUsername"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
+            android:layout_width="380dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:background="@drawable/custom_input"
+            android:ems="10"
+            android:fontFamily="@font/lato_bold"
+            android:hint="Inserisci Username"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            android:hint="Inserisci lo username" />
         <TextView
-            android:layout_marginTop="15dp"
-            android:layout_marginLeft="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/lato_bold"
             android:text="Password"
-            android:textSize="29dp" />
+            android:textSize="25dp" />
 
         <EditText
 
             android:id="@+id/attrPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
-            android:hint="Inserisci la password" />
+            android:layout_width="380dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:background="@drawable/custom_input"
+            android:ems="10"
+            android:fontFamily="@font/lato_bold"
+            android:hint="Inserisci Password"
+            android:inputType="textPassword"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.8"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/attrUsername" />
 
         <Space
             android:layout_width="match_parent"
@@ -52,10 +74,14 @@
 
         <Button
             android:id="@+id/login"
-            android:layout_width="match_parent"
+            android:layout_width="321dp"
             android:layout_height="wrap_content"
-            android:background="@color/cyan"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/login_input"
+            android:fontFamily="@font/lato_bold"
             android:text="Login"
+            android:textAlignment="gravity"
+            android:textAllCaps="false"
             android:textColor="@color/grigioScuro"
             android:textSize="30dp" />
 
@@ -68,6 +94,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:clickable="true"
+            android:focusable="auto"
             android:gravity="center_horizontal"
             android:text="@string/modPw"
             android:textAlignment="center"
