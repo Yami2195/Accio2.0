@@ -1,8 +1,10 @@
 package com.example.accio;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
@@ -19,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     EditText username, password;
     Button login;
     TextView registrati;
+    Persona persona;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,9 +51,37 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent regResult = new Intent(MainActivity.this, RegistrazioneActivity.class);
                 startActivity(regResult);
+            }
+        });
 
+        login.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.O)
+            @Override
+            public void onClick(View v) {
+                Intent showResult = new Intent(MainActivity.this, MainActivity.class);
+                if(checkInput()){
+                    startActivity(showResult);
+                }
 
             }
         });
     }
+
+    @RequiresApi(api = Build.VERSION_CODES.O)
+    public boolean checkInput(){
+        int errors = 0;
+
+        if(username.getText().toString().equals(persona.getUsername())){
+            username.setError(null);
+        } else {
+            errors++;
+            username.setError("Non corrispondono");
+
+        }
+
+
+
+        return errors==0;
+    }
+
 }
