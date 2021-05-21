@@ -71,15 +71,13 @@ public class MainActivity extends AppCompatActivity {
     public boolean checkInput(){
         int errors = 0;
 
-        if(username.getText().toString().equals(persona.getUsername())){
+        if(username.getText().toString().equals(persona.getUsername()) && password.getText().toString().equals(persona.getPassword())){
             username.setError(null);
         } else {
             errors++;
             username.setError("Non corrispondono");
 
         }
-
-
 
         return errors==0;
     }
